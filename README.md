@@ -55,6 +55,3 @@ Contributions are welcome! If you would like to improve this project, please ope
 
 Make sure to follow best development practices, add tests if necessary, and document your changes.
 
-## Author
-
-This project was developed by [Your Name].
