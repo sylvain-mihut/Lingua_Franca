@@ -15,22 +15,14 @@ def index():
         src_input_lang = request.form.get('src_input_lang')
         src_output_lang = request.form.get('src_output_lang')
 
-        
-
-
+        traduction = ""
         if src_input_lang != None and src_output_lang != None and input_data != None:
             translation = translator.translate(input_data, src=src_input_lang, dest=src_output_lang)  # Traduit le texte
-        return render_template('index.html',  traduction=translation.text, data=lang)
-    
+            traduction = translation.text
+        return render_template('index.html', data=lang, traduction=traduction)
+
     else :
         return render_template('index.html', data=lang)
-
-
-
-
-
-
-
 
 
     # print(src_output_lang)

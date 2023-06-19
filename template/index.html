@@ -8,32 +8,32 @@
     <title>Traducteur</title>
 </head>
 <body>
-    <h1>Le traducteur eco+</h1>
+    <h1>Tanslator</h1>
     <main>
         <div class="form">
             <div class="input">
                 {% block content %}
-                <form action="{{ url_for('index') }}" method="POST">
-                    <select name="src_input_lang">
-                        {% for item in data %}
-                            <option value="{{ item }}">{{ item }}</option>
-                        {% endfor %}
-                    </select>
-                    <textarea name="input" id="" cols="30" rows="10"></textarea>
+                    <form action="{{ url_for('index') }}" method="POST">
+                        <select name="src_input_lang">
+                            {% for item in data %}
+                                <option value="{{ item }}">{{ item }}</option>
+                            {% endfor %}
+                        </select>
+                        <textarea name="input" cols="40" rows="15"></textarea>
             </div>
+                    <div class="button">                        
+                        <input type="submit" value="Traduire">
+                    </div>
             <div class="output">
                 <select name='src_output_lang'>
                     {% for item in data %}
                     <option value="{{ item }}">{{ item }}</option>
                     {% endfor %}
                 </select>
-                <textarea name="output" id="" cols="30" rows="10" >{{ traduction }}</textarea>
+                <textarea name="output" cols="40" rows="15" >{{ traduction }}</textarea>
                 
                 {% endblock %}
             </div>
-        </div>
-        <div class="button">    
-            <input type="submit" value="Traduire">
         </div>
     </form>
     </main>
